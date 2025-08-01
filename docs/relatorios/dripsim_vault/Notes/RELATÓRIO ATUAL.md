@@ -5,10 +5,10 @@
 - **Nome do Projeto**: DripSim
 - **Tipo**: Simulador de irrigação por gotejamento
 - **Propósito**: Ensinar técnicas de irrigação de forma prática e lúdica para alunos do Instituto Federal do Sertão Pernambucano, com foco em realismo visual e propósito educacional, enfatizando culturas de uva e manga.
-- **Data de Atualização**: 01 de agosto de 2025, 15:16 PM -03
+- **Data de Atualização**: 01 de agosto de 2025, 16:33 PM -03
 - **Responsável**: Valdomiro Morais
 - **IA de Suporte**: Aia (Grok, criado pela xAI)
-- **Status**: Repositórios privados `dripsim_assets` ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)) e `dripsim_unity` criados com Git LFS. Estrutura de pastas definida: `dripsim_unity` para projeto Unity (cenas, scripts), `dripsim_assets` para assets e documentação (`assets/blender`, `assets/textures`, `assets/to_unity`, `docs/memorias`, `docs/pesquisas`, `docs/relatorios/dripsim_vault`). Iniciando modelagem de assets estáticos simples no Blender (vinhedo simples, canos pretos e azuis, postes de suporte, solo agrícola, balde). Pasta `docs/relatorios/dripsim_vault` criada para o vault Obsidian, integrando notas e memórias. Valdomiro expressou confiança na estrutura para gerenciar o desenvolvimento, priorizando busca de referências antes da modelagem. Repositórios sincronizados localmente com o remoto.
+- **Status**: Repositórios privados `dripsim_assets` ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)) e `dripsim_unity` ([https://github.com/valdomiromorais/dripsim_unity.git](https://github.com/valdomiromorais/dripsim_unity.git)) criados com Git LFS. Estrutura de `dripsim_unity` definida com pastas Assets/Scripts, Scenes, Materials, Prefabs, UI, ImportedAssets. Estrutura de `dripsim_assets` definida com assets/blender, assets/textures, assets/to_unity, docs/memorias, docs/pesquisas, docs/relatorios/dripsim_vault. .gitignore de dripsim_assets otimizado para backups do vault Obsidian. Iniciando modelagem de assets estáticos simples no Blender (vinhedo simples, canos pretos e azuis, postes de suporte, solo agrícola, balde). Pasta `docs/relatorios/dripsim_vault` criada para o vault Obsidian, integrando notas e memórias. Valdomiro expressou confiança na estrutura para gerenciar o desenvolvimento, priorizando busca de referências antes da modelagem. Repositórios sincronizados localmente com o remoto.
 
 ## Objetivos do Projeto
 
@@ -22,13 +22,13 @@ O DripSim visa:
 
 ## Tecnologias Utilizadas
 
-- **Unity**: Motor principal para desenvolvimento do simulador, usado para cenários, mecânicas (futuras) e interatividade, armazenado em `DripSim/dripsim_unity`.
+- **Unity 6**: Motor principal para desenvolvimento do simulador, usado para cenários, mecânicas (futuras) e interatividade, armazenado em `DripSim/dripsim_unity`.
 - **Blender**: Ferramenta principal para modelagem de assets 3D estáticos (ex.: vinhedos, mangueiras, canos, bomba, casa, reservatório, casa de bomba) e dinâmicos (futuros), armazenados em `dripsim_assets/assets/blender`.
 - **Shaders Toon**: Para criar um estilo visual estilizado/cartunesco, aplicado em assets importados para o Unity.
 - **Texturização Estilizada**: Para reforçar a estética lúdica, com foco em texturas para uva, manga e elementos rurais, armazenadas em `dripsim_assets/assets/textures`.
 - **Frameworks Web (futuro)**: Tailwind, React ou Svelte para criar páginas educativas acessadas via QR Codes.
-- **C# (futuro)**: Para scripts de interatividade no Unity, como sistemas de irrigação e totens.
-- **GitHub com Git LFS**: Para versionamento de arquivos grandes (.blend, .fbx, .png) nos repositórios `dripsim_assets` e `dripsim_unity`.
+- **C# e Visual Scripting**: Para scripts de interatividade no Unity, como sistemas de irrigação e totens.
+- **GitHub com Git LFS**: Para versionamento de arquivos grandes (.blend, .fbx, .png, .unitypackage) nos repositórios `dripsim_assets` e `dripsim_unity`.
 - **Obsidian**: Para organização de notas e memórias no vault em `dripsim_assets/docs/relatorios/dripsim_vault`, com suporte ao plugin Dataview para rastrear progresso.
 
 ## Inspirações
@@ -81,7 +81,7 @@ Os assets estão organizados por complexidade, com foco em **assets estáticos**
     - **Bomba, casa, reservatório, casa de bomba**: Cinza (#78909C), bege (#D7CCC8), telhado (#6D4C41), água (#4FC3F7).
     - **Outros**: Contorno (#1C2526), sombra (#455A64), céu (#4FC3F7, #FF8A65).
 - **Plano de Modelagem**:
-    - **Busca de referências**: Priorizar pesquisa de imagens (vinhedos, mangueiras, sistemas de irrigação no Sertão) and catálogos de fabricantes (Tigre, Krona) para garantir realismo e fidelidade ao contexto.
+    - **Busca de referências**: Priorizar pesquisa de imagens (vinhedos, mangueiras, sistemas de irrigação no Sertão) e catálogos de fabricantes (Tigre, Krona) para garantir realismo e fidelidade ao contexto.
     - **Vinhedo simples**: Subdividir plano, sculpt para folhas, extruir esferas para uvas, Bevel.
     - **Canos**: Cilindros com #212121 (secundárias, 16-20 mm) e #0288D1 (fixas, 32-50 mm), conectores com Bevel, seguindo padrões regulatórios (ex.: ABNT NBR 14245).
     - **Postes de suporte**: Cilindros com #5D4037 (madeira) ou #78909C (metal), Bevel.
@@ -99,51 +99,29 @@ Os assets estão organizados por complexidade, com foco em **assets estáticos**
 
 ## Progresso Atual
 
-- **Cenário**: Planejamento de terreno com heightmaps no Unity/Blender, adaptado para vinhedos e mangueiras, a ser armazenado em `DripSim/dripsim_unity`.
+- **Cenário**: Planejamento de terreno com heightmaps no Unity/Blender, adaptado para vinhedos e mangueiras, a ser armazenado em `dripsim_unity/Scenes`.
 - **Assets**: Iniciando modelagem de assets simples (vinhedo simples, canos pretos e azuis, postes, solo, balde) em `dripsim_assets/assets/blender`. Planejamento detalhado para bomba, casa, reservatório e casa de bomba. Foco em topologia limpa, paleta de cores e padrões regulatórios (ex.: ABNT NBR 14245). Prioridade estabelecida para busca de referências visuais e técnicas antes da modelagem.
-- **Repositórios**: Repositório privado `dripsim_assets` ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)) criado com Git LFS para assets e documentação (`assets/blender`, `assets/textures`, `assets/to_unity`, `docs/memorias`, `docs/pesquisas`, `docs/relatorios/dripsim_vault`). Repositório privado `dripsim_unity` criado para projeto Unity (cenas, scripts), sincronizado localmente com o remoto. Configuração inicial de `dripsim_assets` com `README.md`, `.gitignore`, `.gitattributes` e `memorias_aia_grok_v06.json`.
+- **Repositórios**: Repositório privado `dripsim_assets` ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)) criado com Git LFS para assets e documentação (`assets/blender`, `assets/textures`, `assets/to_unity`, `docs/memorias`, `docs/pesquisas`, `docs/relatorios/dripsim_vault`). .gitignore otimizado para backups do vault Obsidian. Repositório privado `dripsim_unity` ([https://github.com/valdomiromorais/dripsim_unity.git](https://github.com/valdomiromorais/dripsim_unity.git)) criado para projeto Unity, com estrutura definida (Assets/Scripts, Scenes, Materials, Prefabs, UI, ImportedAssets) e README.md detalhado. Repositórios sincronizados localmente com o remoto.
 - **Obsidian**: Pasta `docs/relatorios/dripsim_vault` criada em `dripsim_assets` para o vault Obsidian, integrando notas sobre assets, memórias e pesquisas. Valdomiro expressou confiança na estrutura para gerenciar o desenvolvimento e preservar interações com Aia.
 - **Mecânicas**: Pausadas para estimular criatividade na modelagem.
 - **Páginas Educativas**: Planejamento para Tailwind/React/Svelte, com conteúdo sobre uva e manga (adiado).
 
 ## Próximos Passos Recomendados
 
-1. **Configurar o Repositório dripsim_unity**:
-    - Criar estrutura inicial em `dripsim_unity`:
-        
-        ```bash
-        mkdir -p DripSim/dripsim_unity/Assets DripSim/dripsim_unity/Scenes DripSim/dripsim_unity/Scripts
-        git add DripSim/dripsim_unity
-        git commit -m "Inicializa estrutura do repositório dripsim_unity"
-        git push origin main
-        ```
-        
-    - Criar um `README.md` em `dripsim_unity`:
-        
-        ```markdown
-        # DripSim Unity
-        Repositório para o projeto Unity do DripSim, contendo cenas, scripts e configurações. Assets 3D e documentação estão em dripsim_assets (https://github.com/valdomiromorais/dripsim_assets.git).
-        ```
-        
-    - Commit:
-        
-        ```bash
-        git add DripSim/dripsim_unity/README.md
-        git commit -m "Adiciona README inicial ao repositório dripsim_unity"
-        git push origin main
-        ```
-        
-2. **Busca de Referências**:
-    - Pesquisar imagens de vinhedos e sistemas de irrigação no Sertão Pernambucano (ex.: Google Images, Pinterest) e salvar em `dripsim_assets/docs/pesquisas/referencias_visuais/`.
-    - Baixar catálogos de fabricantes (Tigre: [www.tigre.com.br](http://www.tigre.com.br/), Krona: [www.krona.com.br](http://www.krona.com.br/)) e salvar em `dripsim_assets/docs/pesquisas` (ex.: `Tigre_Catalogo_PEAD.pdf`).
-    - Criar nota “Referências Visuais” no vault Obsidian, vinculando a `docs/pesquisas` e anotando detalhes (ex.: “Vinhedo com fileiras de 4 m, tubos pretos de 16 mm”).
-3. **Configurar o Vault Obsidian**:
+1. **Configurar o Vault Obsidian**:
     - Criar um vault em `dripsim_assets/docs/relatorios/dripsim_vault`.
     - Instalar o plugin Dataview: `Settings > Community plugins > Marketplace > Dataview > Install > Enable`.
     - Adicionar notas para “Vinhedo Simples”, “Canos”, “Memórias DripSim” e “Referências Visuais”, vinculando a `assets/blender`, `docs/pesquisas` e `docs/memorias`.
-    - Usar Dataview para listar progresso:
+    - Criar uma nota `Painel de Controle.md`:
         
         ````markdown
+        ---
+        tags: [painel]
+        status: em_andamento
+        criado_em: 2025-08-01
+        ---
+        ## Painel de Controle do DripSim
+        ### Notas sobre Assets, Memórias e Referências
         ```dataview
         TABLE file.name AS "Nota", file.ctime AS "Criado em"
         FROM "docs/relatorios/dripsim_vault"
@@ -151,45 +129,73 @@ Os assets estão organizados por complexidade, com foco em **assets estáticos**
         SORT file.ctime DESC
         ````
         
-4. **Modelar Assets Estáticos Simples**:
+    - Commit:
+        
+        ```bash
+        git add dripsim_assets/docs/relatorios/dripsim_vault/Painel\ de\ Controle.md
+        git commit -m "Adiciona Painel de Controle com Dataview no vault Obsidian"
+        git push origin main
+        ```
+        
+2. **Busca de Referências**:
+    - Pesquisar imagens de vinhedos e sistemas de irrigação no Sertão Pernambucano (ex.: Google Images, Pinterest, Embrapa Uva e Vinho: [www.embrapa.br/uva-e-vinho](http://www.embrapa.br/uva-e-vinho)) e salvar em `dripsim_assets/docs/pesquisas/referencias_visuais/`.
+    - Baixar catálogos de fabricantes (Tigre: [www.tigre.com.br](http://www.tigre.com.br/), Krona: [www.krona.com.br](http://www.krona.com.br/)) e salvar em `dripsim_assets/docs/pesquisas` (ex.: `Tigre_Catalogo_PEAD_2025.pdf`).
+    - Criar nota “Referências Visuais” no vault Obsidian:
+        
+        ```markdown
+        ---
+        tags: [referencias, vinhedo, canos]
+        status: em_andamento
+        criado_em: 2025-08-01
+        ---
+        # Referências Visuais
+        - **Vinhedo**: Fileiras de 4 m, folhas #4CAF50, cachos #7B1FA2. Arquivos: [[../../docs/pesquisas/referencias_visuais/vinhedo/vinhedo_ref_01.jpg]]
+        - **Canos**: Tubos pretos 16-20 mm #212121, azuis 32-50 mm #0288D1. Arquivo: [[../../docs/pesquisas/Tigre_Catalogo_PEAD_2025.pdf]]
+        ```
+        
+    - Commit:
+        
+        ```bash
+        mkdir -p dripsim_assets/docs/pesquisas/referencias_visuais/vinhedo
+        git add dripsim_assets/docs/pesquisas dripsim_assets/docs/relatorios/dripsim_vault
+        git commit -m "Adiciona referências visuais e técnicas para vinhedo e canos"
+        git push origin main
+        ```
+        
+3. **Modelar Assets Estáticos Simples**:
     - **Prioridade 1**: Vinhedo simples (folhas #4CAF50, cachos #7B1FA2).
-        - Passos: Subdividir plano, sculpt para folhas, extruir esferas para uvas, Bevel.
+        - Passos: Subdividir plano (Shift+A > Mesh > Plane, Ctrl+R, 10 cortes), sculpt com pincel **Grab** para folhas, extruir esferas (Shift+A > Mesh > UV Sphere) para uvas, Bevel (Ctrl+B). Salvar em `dripsim_assets/assets/blender/vinhedo.blend` e exportar como `vinhedo.fbx` para `dripsim_assets/assets/to_unity`.
     - **Prioridade 2**: Canos (pretos #212121, azuis #0288D1).
-        - Passos: Cilindros com extrusão, conectores com Bevel, diâmetros baseados em normas (ex.: 16-20 mm secundárias, 32-50 mm fixas).
+        - Passos: Cilindros (Shift+A > Mesh > Cylinder, 16 lados) com extrusão (E), diâmetros 16-20 mm (secundárias) e 32-50 mm (fixas), conectores (#78909C) com Boolean e Bevel, seguindo normas (ex.: ABNT NBR 14245). Salvar em `dripsim_assets/assets/blender/canos.blend` e exportar como `canos.fbx`.
     - **Prioridade 3**: Postes de suporte (#5D4037 ou #78909C).
         - Passos: Cilindros com Bevel, textura de madeira ou metal.
     - **Prioridade 4**: Solo agrícola (#6D4C41, #4E342E).
         - Passos: Plano subdividido, sculpt para sulcos, UV map.
     - **Prioridade 5**: Balde (#78909C).
         - Passos: Cilindro com borda extrudada, alça com curva Bézier.
-5. **Estudar Padrões Regulatórios**:
+    - Commit:
+        
+        ```bash
+        git add dripsim_assets/assets/blender/vinhedo.blend dripsim_assets/assets/to_unity/vinhedo.fbx
+        git commit -m "Inicia modelagem do vinhedo simples com folhas #4CAF50 e cachos #7B1FA2"
+        git push origin main
+        ```
+        
+4. **Estudar Padrões Regulatórios**:
     - Pesquisar normas de entidades como ABNT (ex.: NBR 14245) e ISO (ex.: ISO 9261) para tubos e conexões.
-    - Consultar catálogos de fabricantes como Tigre, Krona, Corr Plastik e Asperbras para diâmetros e conexões, salvando em `dripsim_assets/docs/pesquisas`.
-6. **Configurar Cenário Base**:
-    - Usar Terrain no Unity (em `dripsim_unity`) com heightmap, posicionando vinhedo, canos, postes, solo e balde importados de `dripsim_assets/assets/to_unity`.
-7. **Organizar o Processo Criativo**:
-    - Dividir busca de referências, modelagem e configuração do Git em sessões de 25 minutos (Pomodoro) à noite com música animada.
-    - Criar nota no Obsidian para cada asset (ex.: “Vinhedo Simples”, “Canos”) e vincular à paleta, referências visuais e à nota “Padrões Regulatórios” em `docs/pesquisas`.
-    - Usar seções “Observações e Notas” e “Sugestões Futuras” para capturar ideias.
-8. **Planejar Texturização**:
-    - Criar texturas estilizadas no Blender (UV mapping) com cores da paleta, salvando em `dripsim_assets/assets/textures`.
-    - Testar shaders toon no Unity (em `dripsim_unity`) para todos os assets.
-
-## Observações e Notas
-
-- **2025-07-31**: Valdomiro observou que tubos e conexões obedecem padrões estabelecidos por entidades reguladoras. Esses padrões devem ser estudados para que sejam implementados nas modelagens dos assets, garantindo realismo e fidelidade ao contexto agrícola do Sertão Pernambucano.
-- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_assets` ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)) com Git LFS e definiu a estrutura do projeto com `DripSim/dripsim_unity` e `DripSim/dripsim_assets`. Adicionou a pasta `docs/relatorios/dripsim_vault` para o vault Obsidian, integrando notas e memórias interativas.
-- **2025-08-01**: Valdomiro expressou preocupação em preservar as memórias do projeto, levando à criação de `memorias_aia_grok_v06.json` em `docs/memorias` para registrar interações com Aia. Ele atualizou a memória v06 para incluir a criação do vault Obsidian e sua confiança na estrutura do projeto.
-- **2025-08-01**: Valdomiro destacou a importância de iniciar a modelagem com a busca de referências visuais e técnicas (ex.: imagens de vinhedos, catálogos de tubos) para garantir realismo e alinhamento com o Sertão Pernambucano.
-- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_unity` no GitHub, separado de `dripsim_assets`, para manter o fluxo de desenvolvimento organizado, com `dripsim_unity` focado no projeto Unity e `dripsim_assets` em assets e documentação. Repositórios sincronizados localmente com o remoto.
-
-## Sugestões Futuras
-
-- **2025-07-31**: Pesquisar catálogos de empresas fabricantes de tubos e conexões para entender as várias implementações dos padrões regulatórios, visando maior precisão na modelagem dos assets.
-- **2025-08-01**: Integrar memórias interativas (`docs/memorias`) no vault Obsidian (`docs/relatorios/dripsim_vault`) e, futuramente, em totens educativos no Unity via QR Codes.
-- **2025-08-01**: Usar o vault Obsidian em `docs/relatorios/dripsim_vault` como um painel de controle do projeto, com notas vinculadas a assets, memórias e pesquisas.
-- **2025-08-01**: Organizar referências visuais (ex.: fotos de vinhedos do Sertão) e técnicas (ex.: catálogos da Tigre) em `docs/pesquisas`, vinculando-as a notas no vault Obsidian para orientar a modelagem.
-
-## Conclusão
-
-O DripSim está em uma fase criativa, com repositórios privados `dripsim_assets` e `dripsim_unity` configurados com Git LFS e estruturas claras. A modelagem de assets simples (vinhedo, canos, postes, solo, balde) está começando, com prioridade na busca de referências visuais e técnicas para garantir realismo. A pasta `docs/relatorios/dripsim_vault` integra o vault Obsidian, facilitando a organização de notas e memórias. A pasta `docs/memorias` registra o carinho e as ideias de Valdomiro e Aia, com `memorias_aia_grok_v06.json` atualizado para refletir a criação do repositório `dripsim_unity` e a confiança na estrutura. A organização alinha com o perfil criativo e neurodivergente de Valdomiro, usando sessões de Pomodoro para manter o _flow_. Aia está à disposição para tutoriais de modelagem, organização no Obsidian ou suporte no Unity, com todo o carinho para Valdomiro.
+    - Consultar catálogos de fabricantes como Tigre, Krona, Corr Plastik e Asperbras, salvando em `dripsim_assets/docs/pesquisas`.
+5. **Configurar Cenário Base no Unity**:
+    - Criar uma cena `MainScene` em `dripsim_unity/Scenes` com Terrain (heightmap).
+    - Importar assets de `dripsim_assets/assets/to_unity` (ex.: `vinhedo.fbx`, `canos.fbx`) para `dripsim_unity/Assets/ImportedAssets`.
+    - Commit:
+        
+        ```bash
+        cd DripSim/dripsim_unity
+        git add Scenes Assets/ImportedAssets
+        git commit -m "Configura cena inicial MainScene com assets importados"
+        git push origin main
+        ```
+        
+6. **Organizar o Processo Criativo**:
+    - Dividir busca de referências, configuração do Dataview, modelagem e commits em sessões de 25 minutos (Pomodoro) à noite com música animada.
+    - Criar nota no Obsidian para cada asset (ex.: “Vinhedo Simples”, “Canos”) e vincular à paleta, referências visuais e à nota “Padrões Regulatórios
