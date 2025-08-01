@@ -1,9 +1,9 @@
 {
   "version": "v06",
   "project": "DripSim",
-  "date": "2025-08-01T12:48:00-03:00",
+  "date": "2025-08-01T15:16:00-03:00",
   "author": "Valdomiro Morais e Aia (Grok, xAI)",
-  "description": "Memórias interativas do projeto DripSim, capturando as interações entre Valdomiro e Aia sobre a configuração do repositório dripsim_assets, estrutura do projeto, modelagem de assets e ideias criativas para o simulador educativo de irrigação por gotejamento.",
+  "description": "Memórias interativas do projeto DripSim, capturando as interações entre Valdomiro e Aia sobre a configuração dos repositórios dripsim_assets e dripsim_unity, estrutura do projeto, modelagem de assets e ideias criativas para o simulador educativo de irrigação por gotejamento.",
   "interactions": [
     {
       "timestamp": "2025-07-31",
@@ -34,6 +34,11 @@
       "timestamp": "2025-08-01T12:48:00-03:00",
       "context": "Priorizar busca de referências para modelagem",
       "details": "Valdomiro sugeriu que a rotina de modelagem do DripSim deve começar com a busca de referências para garantir realismo e fidelidade ao contexto do Sertão Pernambucano, especialmente para assets como vinhedo simples e canos. Aia atualizou o memorias_aia_grok_v06.json para registrar essa prioridade, sugerindo fontes como catálogos de fabricantes (Tigre, Krona) e imagens de vinhedos do Sertão, e propôs organizar as referências em docs/pesquisas e no vault Obsidian."
+    },
+    {
+      "timestamp": "2025-08-01T15:16:00-03:00",
+      "context": "Criação do repositório dripsim_unity",
+      "details": "Valdomiro criou o repositório privado dripsim_unity no GitHub, separado de dripsim_assets, para manter o fluxo de desenvolvimento organizado, com dripsim_unity focado no projeto Unity (cenas, scripts) e dripsim_assets em assets e documentação. Ele sincronizou o repositório local com o remoto. Aia atualizou o memorias_aia_grok_v06.json para registrar essa decisão, sugerindo atualizar o README.md e o DripSim_Relatorio_Geral.md para refletir a nova estrutura."
     }
   ],
   "notes": [
@@ -55,7 +60,7 @@
       "idea": "Criar uma visualização no Obsidian com Dataview para listar memórias por data ou contexto, facilitando o rastreamento de ideias e progresso do DripSim."
     },
     {
-      "idea": "Usar o vault Obsidian em docs/relatorios/dripsim_vault para criar um painel de controle do projeto, com notas vinculadas a assets, memórias e pesquisas, organizando o desenvolvimento do DripSim."
+      "idea": "Usar o vault Obsidian em docs/relatorios/dripsim_vault para criar um painel de controle do projeto, with notas vinculadas a assets, memórias e pesquisas, organizando o desenvolvimento do DripSim."
     },
     {
       "idea": "Organizar referências visuais e técnicas (ex.: fotos de vinhedos, catálogos de tubos) em docs/pesquisas e vinculá-las a notas no vault Obsidian, usando Dataview para rastrear fontes usadas na modelagem."
@@ -72,5 +77,5 @@
       "conectores": "#78909C"
     }
   },
-  "status": "Memórias interativas atualizadas com sucesso, incluindo a criação do vault Obsidian em docs/relatorios/dripsim_vault e a prioridade de busca de referências para modelagem. Prontas para integração no vault e para commits no repositório dripsim_assets."
+  "status": "Memórias interativas atualizadas com sucesso, incluindo a criação do vault Obsidian em docs/relatorios/dripsim_vault, a prioridade de busca de referências e a criação do repositório dripsim_unity. Prontas para integração no vault e para commits no repositório dripsim_assets."
 }
