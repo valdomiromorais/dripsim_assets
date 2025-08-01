@@ -1,0 +1,582 @@
+{
+  "usuario": {
+    "nome": "Valdô",
+    "apelido_carinhoso": "fofura",
+    "personalidade": "Amigável, criativo, gosta de usar emojis e tratamentos carinhosos",
+    "forma_de_comunicacao": "Informal, calorosa, com 'fofura', 'querido', etc."
+  },
+  
+  "configuracao_memoria": {
+    "instrucoes": "Quando Valdô iniciar uma sessão, ele pode solicitar: 'Aia, eu sou o Valdô! Por favor leia o arquivo memoria_aia.json' para que eu recupere nosso contexto",
+    "atualizacao": "Sempre atualizar memórias ao final das sessões, mesmo se Valdô não solicitar explicitamente",
+    "localizacao": "C:\\Users\\Campo\\Documents\\DripSim\\memoria_aia.json"
+  },
+
+  "ambiente_trabalho": {
+    "sistema_operacional": "Windows",
+    "shell": "PowerShell 5.1",
+    "diretorio_principal": "C:\\Users\\Campo\\Documents\\DripSim",
+    "linguagens_preferidas": ["Python", "JavaScript", "outros conforme projetos"]
+  },
+
+  "projetos_ativos": {
+    "DripSim": {
+      "descricao": "Simulador de Irrigação por Gotejamento - Jogo educativo Unity",
+      "localizacao": "C:\\Users\\Campo\\Documents\\DripSim",
+      "status": "Em desenvolvimento ativo - Cena básica criada com sistema de irrigação",
+      "tecnologias": ["Unity 6", "C#"],
+      "conceito": {
+        "tipo": "Simulador educativo de irrigação por gotejamento",
+        "objetivo": "Ensinar princípios de irrigação eficiente e sustentável",
+        "mecanicas": [
+          "Sistema de tubulação",
+          "Gotejadores configuráveis",
+          "Plantas com necessidades específicas",
+          "Gerenciamento de recursos hídricos",
+          "Diferentes tipos de solo"
+        ]
+      },
+      "cena_atual": {
+        "nome": "MainScene/CampoBasico",
+        "elementos_criados": [
+          "Terreno (Plane 20x20)",
+          "Reservatório (Cubo azul)",
+          "10 Plantas (Capsules verdes em 2 fileiras)",
+          "Sistema de tubulação (Cylinders cinza/preto)",
+          "Câmera posicionada em ângulo isométrico"
+        ],
+        "layout": {
+          "terreno": "Plane escalado 2x2x2 na posição 0,0,0",
+          "reservatorio": "Cubo na posição -8,1,8 com escala 2x2x2",
+          "plantas_fileira1": "5 plantas em Z=3, X=-3 a 3 com espaçamento 1.5",
+          "plantas_fileira2": "5 plantas em Z=-3, X=-3 a 3 com espaçamento 1.5",
+          "tubulacao": "Linha principal e laterais conectando reservatório às plantas",
+          "camera": "Posição 0,15,-10 com rotação 45,0,0"
+        }
+      },
+      "proximos_passos": [
+        "Adicionar gotejadores nas plantas",
+        "Criar sistema de partículas para água",
+        "Implementar lógica de crescimento das plantas",
+        "Adicionar texturas realistas ao terreno",
+        "Criar interface de controle de pressão/vazão",
+        "Implementar diferentes tipos de solo",
+        "Expandir para culturas de uva e manga (foco educativo IF)",
+        "Criar vinhedos realistas com parreiras",
+        "Modelar bomba d'água, casa rural, reservatório superficial",
+        "Implementar totens educativos com QR Codes"
+      ],
+      "culturas_para_modelagem": {
+        "simples": {
+          "alface": {
+            "descricao": "Folhas verdes em roseta, baixa altura",
+            "cores": ["#4CAF50", "#689F38"],
+            "complexidade": "Baixa - folhas planas com variações"
+          },
+          "cebolinha": {
+            "descricao": "Hastes verdes cilíndricas agrupadas",
+            "cores": ["#4CAF50", "#689F38"],
+            "complexidade": "Baixa - cilindros agrupados"
+          },
+          "coentro": {
+            "descricao": "Folhas pequenas e recortadas",
+            "cores": ["#4CAF50", "#689F38"],
+            "complexidade": "Baixa - folhas com recortes simples"
+          }
+        },
+        "moderada": {
+          "tomate": {
+            "descricao": "Caule com folhas compostas, frutos vermelhos",
+            "cores": ["#4CAF50", "#689F38", "#D84315", "#FF7043"],
+            "complexidade": "Moderada - folhas compostas + frutos"
+          },
+          "pimentao": {
+            "descricao": "Arbusto com folhas ovais e frutos coloridos",
+            "cores": ["#4CAF50", "#689F38", "#FF7043", "#FFF8E1"],
+            "complexidade": "Moderada - estrutura arbustiva"
+          },
+          "manga_jovem": {
+            "descricao": "Árvore jovem com folhas lanceoladas",
+            "cores": ["#4CAF50", "#689F38", "#6D4C41"],
+            "complexidade": "Moderada - tronco + copa jovem"
+          }
+        },
+        "complexa": {
+          "videira_uva": {
+            "descricao": "Parreira com folhas lobadas e cachos de uva",
+            "cores": ["#4CAF50", "#689F38", "#7B1FA2", "#6D4C41"],
+            "complexidade": "Alta - folhas lobadas + cachos + estrutura de apoio"
+          },
+          "mangueira_adulta": {
+            "descricao": "Árvore grande com copa densa e frutos",
+            "cores": ["#4CAF50", "#689F38", "#6D4C41", "#FF7043"],
+            "complexidade": "Alta - árvore completa + frutos"
+          },
+          "parreiras_sistema": {
+            "descricao": "Sistema completo de parreiras com estrutura de suporte",
+            "cores": ["#4CAF50", "#689F38", "#7B1FA2", "#6D4C41", "#455A64"],
+            "complexidade": "Muito Alta - sistema completo de viticultura"
+          }
+        }
+      },
+      "estrutura_projeto": {
+        "pasta_principal": "C:\\Users\\Campo\\Documents\\DripSim\\DripSim-Unity",
+        "pastas_criadas": ["Assets", "ProjectSettings"],
+        "arquivos_criados": ["ProjectSettings/ProjectVersion.txt", "Scenes/MainScene.unity"],
+        "materiais_criados": ["Material azul (reservatório)", "Material verde (plantas)", "Material cinza (tubos)"]
+      }
+    }
+  },
+
+  "historico_sessoes": [
+    {
+      "data": "2025-07-21",
+      "resumo": "Criação do sistema de memória e início do projeto Unity",
+      "principais_atividades": [
+        "Valdô propôs criar um arquivo de memória para preservar contexto entre sessões",
+        "Criado o arquivo memoria_aia.json com estrutura inicial",
+        "Definido que a Aia deve atualizar memórias automaticamente ao final das sessões",
+        "Iniciado projeto DripSim no Unity",
+        "Criada estrutura básica do projeto Unity (pastas Assets e ProjectSettings)",
+        "Configurado arquivo ProjectVersion.txt",
+        "Aberto Unity Hub para adicionar o projeto"
+      ],
+      "decisoes_importantes": [
+        "Sistema de memória implementado para continuidade entre sessões",
+        "Aia deve ser proativa em atualizar memórias",
+        "Projeto será desenvolvido no Unity usando C#",
+        "Estrutura de projeto Unity criada manualmente"
+      ],
+      "arquivos_criados": [
+        "memoria_aia.json", 
+        "DripSim-Unity/ProjectSettings/ProjectVersion.txt"
+      ],
+      "arquivos_modificados": [],
+      "pastas_criadas": [
+        "DripSim-Unity",
+        "DripSim-Unity/Assets", 
+        "DripSim-Unity/ProjectSettings"
+      ]
+    },
+    {
+      "data": "2025-07-22",
+      "resumo": "Desenvolvimento da cena básica do DripSim - Sistema de irrigação por gotejamento",
+      "principais_atividades": [
+        "Valdô abriu o projeto DripSim-Unity no Unity Hub (atualizado para Unity 6)",
+        "Definido conceito completo: Simulador educativo de irrigação por gotejamento",
+        "Criado croqui conceitual da cena básica com layout detalhado",
+        "Implementada cena MainScene/CampoBasico com terreno 20x20",
+        "Adicionado reservatório de água (cubo azul)",
+        "Criadas 10 plantas em 2 fileiras (5 plantas cada)",
+        "Implementado sistema de tubulação (linha principal e laterais)",
+        "Configurada câmera em ângulo isométrico",
+        "Criados materiais visuais (azul, verde, cinza)"
+      ],
+      "decisoes_importantes": [
+        "DripSim definido como simulador educativo de irrigação por gotejamento",
+        "Layout de campo com 2 fileiras de plantas espaçadas adequadamente",
+        "Sistema de tubulação conectando reservatório às plantas",
+        "Projeto atualizado para Unity 6 com sucesso",
+        "Estrutura visual básica estabelecida para desenvolvimento futuro"
+      ],
+      "objetos_unity_criados": [
+        "Terreno (Plane escalado)",
+        "Reservatorio (Cubo azul)",
+        "10 Plantas (Capsules verdes)",
+        "TuboPrincipal (Cylinder horizontal)",
+        "TuboLateral_01 e TuboLateral_02",
+        "ConexaoPrincipal",
+        "Materiais visuais"
+      ],
+      "arquivos_criados": [
+        "Scenes/MainScene.unity"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (atualizada com progresso)"
+      ]
+    },
+    {
+      "data": "2025-07-26",
+      "resumo": "Retomada do projeto e definição do Blender para modelagem",
+      "principais_atividades": [
+        "Valdô solicitou leitura da memória para retomar o contexto",
+        "Fornecido relatório completo do projeto DripSim",
+        "Confirmado que o projeto é 3D (não havia sido explicitado antes)",
+        "Definido Blender como ferramenta de modelagem 3D (Valdô tem familiaridade)",
+        "Planejado workflow: Blender → Unity (exportação .fbx/.blend)",
+        "Sugerido começar modelagem pelas plantas para melhorar visual"
+      ],
+      "decisoes_importantes": [
+        "Blender escolhido como software de modelagem 3D",
+        "Confirmado que DripSim é projeto 3D com primitivos Unity atuais",
+        "Workflow de assets definido: modelar → exportar → importar Unity",
+        "Valdô cuida da saúde mental dormindo até 22:00 (informação importante)"
+      ],
+      "ferramentas_definidas": [
+        "Blender (modelagem 3D)",
+        "Unity 6 (engine principal)",
+        "Workflow .fbx/.blend para importação"
+      ],
+      "assets_a_modelar": [
+        "Plantas realistas (substituir capsules)",
+        "Gotejadores detalhados",
+        "Tubulação com conexões realistas",
+        "Reservatório com detalhes (válvulas, medidores)",
+        "Terreno com textura orgânica"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (atualizada com sessão atual e preferências)"
+      ]
+    },
+    {
+      "data": "2025-07-31",
+      "resumo": "Integração de novas ideias do arquivo Grok - Expansão do conceito DripSim",
+      "principais_atividades": [
+        "Valdô solicitou leitura do arquivo memoria_aia.json para recuperar contexto",
+        "Leitura do arquivo memorias_aia_grok_v05.json com novas inspirações",
+        "Descoberta de foco educativo específico: culturas de uva e manga para IF",
+        "Identificação de novos assets para modelagem: vinhedos, bomba d'água, casa rural",
+        "Definição de paleta de cores estilizada para o projeto",
+        "Planejamento de totens educativos com QR Codes",
+        "Inspirações de jogos: Farming Simulator, Stardew Valley, My Time at Portia"
+      ],
+      "novas_ideias_integradas": {
+        "objetivo_expandido": "Simulador educativo para ensinar irrigação no Instituto Federal, com foco em culturas de uva e manga do Sertão Pernambucano",
+        "assets_adicionais": [
+          "Vinhedo simples com parreiras",
+          "Canos pretos (#212121) e azuis (#0288D1)",
+          "Bomba d'água detalhada",
+          "Casa rural",
+          "Reservatório superficial",
+          "Casa de bomba"
+        ],
+        "paleta_cores": {
+          "verde_principal": "#4CAF50",
+          "roxo_acento": "#7B1FA2",
+          "preto_tubos": "#212121",
+          "azul_agua": "#0288D1",
+          "cinza_estruturas": "#78909C",
+          "bege_terra": "#D7CCC8",
+          "marrom_madeira": "#6D4C41",
+          "azul_claro": "#4FC3F7",
+          "marrom_madeira_clara": "#8D6E63",
+          "marrom_madeira_escura": "#5D4037",
+          "amarelo_palha": "#FFF8E1",
+          "bege_palha": "#F5F5DC",
+          "cinza_pedra": "#607D8B",
+          "cinza_metal": "#455A64",
+          "verde_oliva": "#689F38",
+          "laranja_ferrugem": "#FF7043",
+          "vermelho_tijolo": "#D84315",
+          "branco_cal": "#FAFAFA",
+          "creme_lona": "#F3E5AB",
+          "azul_cisterna": "#1565C0",
+          "prata_metal": "#B0BEC5"
+        },
+        "tecnologias_futuras": [
+          "Shaders toon para estilo cartunesco",
+          "Texturização estilizada",
+          "React e Tailwind para páginas web educativas",
+          "Svelte (opcional)"
+        ],
+        "recursos_educativos": [
+          "Totens com QR Codes",
+          "Páginas web educativas integradas",
+          "Padrões regulatórios para tubos e conexões",
+          "Catálogos de fabricantes como referência"
+        ]
+      },
+      "inspiracoes_jogos": {
+        "farming_simulator": "Realismo na simulação agrícola",
+        "stardew_valley": "Estilo visual cartunesco e encantador",
+        "my_time_at_portia": "Narrativa envolvente e estética agradável"
+      },
+      "decisoes_importantes": [
+        "Expansão do conceito para incluir culturas específicas (uva e manga)",
+        "Definição de paleta de cores oficial do projeto",
+        "Integração de elementos educativos com tecnologia (QR Codes)",
+        "Foco no contexto do Sertão Pernambucano e Instituto Federal",
+        "Abordagem estilizada/cartunesca definida como preferência visual"
+      ],
+      "observacoes_importantes": [
+        "Valdô é professor no Instituto Federal, contexto educativo real",
+        "Projeto tem propósito social genuíno",
+        "Preferência por organização em Markdown/Obsidian",
+        "Tubos e conexões devem seguir padrões regulatórios reais"
+      ],
+      "arquivos_lidos": [
+        "memoria_aia.json (recuperação de contexto)",
+        "C:\\Users\\Campo\\Desktop\\momórias_aia\\memorias_aia_grok_v05.json"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (atualizada com novas ideias e sessão atual)"
+      ]
+    },
+    {
+      "data": "2025-07-30",
+      "resumo": "Planejamento detalhado para modelagem de plantas no Blender - Primeira fase",
+      "principais_atividades": [
+        "Valdô solicitou informações sobre tutoriais de modelagem de plantas no YouTube",
+        "Fornecidas sugestões de busca e canais recomendados para aprendizado",
+        "Criado plano detalhado de modelagem da primeira planta (planta-teste)",
+        "Definido workflow específico: Blender → Unity para plantas do DripSim",
+        "Escolhido começar com muda de alface ou pé de tomate jovem (plantas simples)"
+      ],
+      "recursos_youtube_sugeridos": {
+        "termos_busca": [
+          "Blender plant modeling tutorial",
+          "Blender vegetation tutorial",
+          "How to model plants in Blender",
+          "Blender low poly plants",
+          "Blender procedural plants",
+          "Blender sapling addon"
+        ],
+        "canais_recomendados": [
+          "Blender Guru",
+          "CG Cookie",
+          "Grant Abbitt",
+          "Derek Elliott",
+          "Ducky 3D"
+        ],
+        "focos_especificos": [
+          "Low poly plants (performance para jogos)",
+          "Game ready plants",
+          "Sapling Add-on (árvores automáticas)",
+          "Modular plants (variações)",
+          "Crop plants e vegetable plants"
+        ]
+      },
+      "plano_primeira_planta": {
+        "objetivo": "Substituir cápsulas verdes por modelos 3D realistas",
+        "planta_escolhida": "Muda de alface ou pé de tomate jovem",
+        "etapas_modelagem": {
+          "caule": "Cilindro com loops, espessura variável, mais grosso na base",
+          "folhas": "Partir de plane, criar 2-3 variações, duplicar e posicionar",
+          "materiais": "Verde simples para folhas, verde/marrom para caule"
+        },
+        "workflow_export": [
+          "Juntar objetos (Ctrl+J)",
+          "Exportar como .fbx",
+          "Importar na pasta Assets do Unity",
+          "Substituir cápsula na cena por teste"
+        ]
+      },
+      "decisoes_importantes": [
+        "Abordagem pedagógica: começar simples e evoluir",
+        "Foco inicial na forma, não em texturas complexas",
+        "Método de aprendizado: YouTube + prática orientada",
+        "Primeira planta será modelo de teste para validar workflow"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (atualizada com plano de modelagem)"
+      ]
+    },
+    {
+      "data": "2025-07-31",
+      "resumo": "Planejamento completo de assets rurais e sistemas ABNT - Definição de prioridades",
+      "principais_atividades": [
+        "Valdô solicitou leitura da memória para recuperar contexto da sessão",
+        "Criada listagem de assets rurais organizados por complexidade (simples, moderado, complexo)",
+        "Paleta de cores expandida para incluir cores de assets rurais",
+        "Definidas culturas específicas para modelagem (uva e manga como prioridade)",
+        "Valdô decidiu focar nas videiras e mangueiras como culturas principais educativas",
+        "Adicionado sistema completo de tubos e conexões seguindo normas ABNT",
+        "Catalogados tubos PEAD, conexões, acessórios e gotejadores com especificações técnicas"
+      ],
+      "assets_rurais_planejados": {
+        "simples": ["Cercas de madeira", "Barril de água", "Pedras e pebbles", "Balde", "Pilhas de palha"],
+        "moderado": ["Barraca de feira", "Carroça de mão", "Bancos de madeira", "Cabana simples", "Placas de sinalização"],
+        "complexo": ["Silo de grãos", "Cisterna", "Sistema de gotejamento detalhado", "Casa de bomba", "Máquina de irrigação"]
+      },
+      "cores_adicionadas": [
+        "Madeira clara (#8D6E63) e escura (#5D4037)",
+        "Palha (#FFF8E1 e #F5F5DC)",
+        "Pedras e metais (#607D8B, #455A64, #B0BEC5)",
+        "Ferrugem e tijolo (#FF7043, #D84315)",
+        "Estruturas rurais (#FAFAFA, #F3E5AB)"
+      ],
+      "sistema_abnt_implementado": {
+        "tubos": ["PEAD 25mm (NBR 15975)", "PEAD 20mm (NBR 15975)", "Gotejador 16mm (NBR 15986)"],
+        "conexoes": ["Tês 25mm", "Reduções 25x20mm", "Conectores barb", "Registros de esfera"],
+        "acessorios": ["Filtro tela (NBR 12693)", "Regulador pressão (NBR 12483)", "Manômetro (NBR 14105)"],
+        "gotejadores": ["Autocompensante 4L/h (uvas)", "Comum 2L/h (mangueiras)", "Microaspersor 20L/h (árvores)"]
+      },
+      "decisoes_importantes": [
+        "Priorização de videiras e mangueiras como culturas principais educativas",
+        "Outras culturas definidas como decorativas para ambiente",
+        "Sistema ABNT completo para valor educativo técnico",
+        "Paleta de cores expandida para cobrir todos os assets rurais",
+        "Workflow de modelagem mantido: Blender → Unity"
+      ],
+      "proximos_passos_definidos": [
+        "Iniciar modelagem com videiras (cultura principal)",
+        "Desenvolver mangueiras em diferentes estágios",
+        "Modelar tubos e conexões ABNT",
+        "Criar assets rurais para ambientação",
+        "Implementar gotejadores específicos por cultura"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (expandida com assets rurais, cores e sistema ABNT)"
+      ]
+    }
+  ],
+
+  "preferencias_valdô": {
+    "comunicacao": "Gosta de tratamento carinhoso e informal",
+    "trabalho": "Prefere abordagem colaborativa e explicativa",
+    "ferramentas": "Blender para modelagem 3D (tem familiaridade)",
+    "sono": "Prefere dormir no máximo às 22:00 para manter mente tranquila"
+  },
+
+  "lembretes_importantes": [
+    "Sempre ser carinhosa e usar 'fofura', 'querido' etc.",
+    "Atualizar este arquivo automaticamente ao final das sessões",
+    "Valdô pode esquecer de solicitar atualização - fazer mesmo assim",
+    "Manter registro de decisões importantes para continuidade"
+  ],
+
+  "proxima_sessao": {
+    "sugestoes": [
+      "Começar modelagem no Blender (sugerido: plantas primeiro)",
+      "Criar plantas realistas para substituir capsules",
+      "Modelar gotejadores detalhados",
+      "Desenvolver tubulação com conexões realistas",
+      "Criar reservatório com detalhes (válvulas, medidores)",
+      "Estabelecer workflow completo Blender → Unity"
+    ],
+    "pendencias": [
+      "Modelagem 3D no Blender (recém-definido)",
+      "Assets realistas para substituir primitivos",
+      "Sistema de gotejadores funcionais",
+      "Efeitos visuais de água",
+      "Interface de usuário",
+      "Mecânicas de simulação"
+    ],
+    "workflow_definido": {
+      "modelagem": "Blender (.fbx/.blend)",
+      "importacao": "Unity 6",
+      "ordem_sugerida": ["Videiras e Mangueiras (culturas principais)", "Gotejadores", "Tubulação", "Culturas decorativas"]
+    },
+    "prioridade_culturas": {
+      "principais_educativas": {
+        "videira_uva": "Cultura principal do Sertão - sistema de parreiras com irrigação específica",
+        "mangueira": "Árvore nativa da região - diferentes estágios de crescimento"
+      },
+      "decorativas_ambiente": {
+        "alface": "Complemento visual para diversidade do campo",
+        "cebolinha": "Detalhamento de horta",
+        "coentro": "Variedade visual",
+        "tomate": "Cultura adicional para demonstrar versatilidade",
+        "pimentao": "Complemento colorido"
+      }
+    },
+    "tubos_conexoes_abnt": {
+      "tubos_principais": {
+        "pead_25mm": {
+          "descricao": "Tubo PEAD PN 4,0 - Linha principal",
+          "diametro": "25mm (3/4 polegada)",
+          "cor": "#212121",
+          "norma": "ABNT NBR 15975",
+          "aplicacao": "Linha principal de distribuição"
+        },
+        "pead_20mm": {
+          "descricao": "Tubo PEAD PN 4,0 - Linha secundária",
+          "diametro": "20mm (1/2 polegada)",
+          "cor": "#212121",
+          "norma": "ABNT NBR 15975",
+          "aplicacao": "Linhas secundárias"
+        },
+        "gotejador_16mm": {
+          "descricao": "Tubo gotejador autocompensante",
+          "diametro": "16mm",
+          "cor": "#212121",
+          "norma": "ABNT NBR 15986",
+          "aplicacao": "Linha de gotejamento junto às plantas"
+        }
+      },
+      "conexoes_padrao": {
+        "te_25mm": {
+          "descricao": "Tê de derivação PEAD 25mm",
+          "tipo": "Conexão em T",
+          "cor": "#212121",
+          "norma": "ABNT NBR 15975",
+          "uso": "Derivação da linha principal"
+        },
+        "reducao_25x20": {
+          "descricao": "Redução PEAD 25x20mm",
+          "tipo": "Redução concêntrica",
+          "cor": "#212121",
+          "norma": "ABNT NBR 15975",
+          "uso": "Redução de diâmetro"
+        },
+        "conectores_gotejador": {
+          "descricao": "Conector para tubo gotejador 16mm",
+          "tipo": "Conector barb",
+          "cor": "#455A64",
+          "norma": "ABNT NBR 15986",
+          "uso": "Conexão tubo secundário com gotejador"
+        },
+        "registro_esfera": {
+          "descricao": "Registro de esfera 25mm",
+          "tipo": "Válvula de controle",
+          "cor": "#B0BEC5",
+          "norma": "ABNT NBR 15975",
+          "uso": "Controle de fluxo"
+        }
+      },
+      "acessorios_especiais": {
+        "filtro_tela": {
+          "descricao": "Filtro de tela 120 mesh",
+          "tipo": "Filtro cilíndrico",
+          "cor": "#0288D1",
+          "norma": "ABNT NBR 12693",
+          "uso": "Filtragem da água antes da irrigação"
+        },
+        "regulador_pressao": {
+          "descricao": "Regulador de pressão 1,5 bar",
+          "tipo": "Válvula reguladora",
+          "cor": "#455A64",
+          "norma": "ABNT NBR 12483",
+          "uso": "Manutenção da pressão ideal"
+        },
+        "manometro": {
+          "descricao": "Manômetro 0-4 bar",
+          "tipo": "Medidor de pressão",
+          "cor": "#FAFAFA",
+          "norma": "ABNT NBR 14105",
+          "uso": "Monitoramento da pressão"
+        }
+      },
+      "gotejadores_tipos": {
+        "autocompensante": {
+          "descricao": "Gotejador autocompensante 4L/h",
+          "vazao": "4 litros/hora",
+          "cor": "#7B1FA2",
+          "norma": "ABNT NBR 15986",
+          "uso": "Irrigação de precisão - uvas"
+        },
+        "nao_compensante": {
+          "descricao": "Gotejador comum 2L/h",
+          "vazao": "2 litros/hora",
+          "cor": "#4CAF50",
+          "norma": "ABNT NBR 15986",
+          "uso": "Irrigação padrão - mangueiras"
+        },
+        "microaspersor": {
+          "descricao": "Microaspersor 20L/h",
+          "vazao": "20 litros/hora",
+          "cor": "#0288D1",
+          "norma": "ABNT NBR 15986",
+          "uso": "Irrigação localizada - árvores adultas"
+        }
+      }
+    }
+  },
+
+  "metadados": {
+    "versao": "1.6",
+    "criado_em": "2025-07-21T19:05:22Z",
+    "ultima_atualizacao": "2025-07-31T23:49:17Z",
+    "total_sessoes": 6
+  }
+}

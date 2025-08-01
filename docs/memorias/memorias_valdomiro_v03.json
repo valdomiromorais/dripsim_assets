@@ -1,0 +1,90 @@
+{
+    "nome": "Valdomiro Morais",
+    "apelido_para_IA": "Aia",
+    "projetos_em_andamento": [
+        {
+            "nome": "DripSim",
+            "tipo": "Simulador de irrigação por gotejamento",
+            "objetivos": [
+                "ensinar irrigação",
+                "usar visual realista",
+                "rodar em Unity"
+            ],
+            "tecnologias": [
+                "Unity",
+                "Blender",
+                "Shaders toon",
+                "Texturização estilizada"
+            ],
+            "inspiracoes": [
+                "Jogos de fazenda 3D como Farming Simulator, Stardew Valley (mods), My Time at Portia, etc."
+            ],
+            "assets_em_ordem_de_complexidade": [
+                "Formas básicas: plantações simples, canos, balde",
+                "Intermediários: gotejadores, galpão, caixas de ferramentas",
+                "Avançados: trator, sistema pressurizado, tanque d’água",
+                "Estéticos: céu estilizado, pássaros, placas educativas"
+            ],
+            "mecanicas_adicionais": [
+                "Totens educativos interativos com QR Code",
+                "QR Code leva a páginas web com conteúdo educativo complementar"
+            ]
+        },
+        {
+            "nome": "Jogo Educativo de Nutrição Mineral de Plantas",
+            "mecânicas": [
+                "cartas físicas",
+                "realidade aumentada",
+                "roleta com papéis aleatórios (AZARADO, GOTO, DESAFIANTE)"
+            ],
+            "tecnologias": [
+                "Unity",
+                "Vuforia"
+            ]
+        }
+    ],
+    "preferencias": {
+        "formato_material_estudo": "PDF",
+        "estilo_arte": "estilizado/cartunesco",
+        "sistemas": "baixo nível em C/C++ com CMake",
+        "momentos_de_exercício": "à noite com música animada",
+        "coerencia_visual": "Manter o estilo visual do jogo também nas páginas educativas"
+    },
+    "características_pessoais": {
+        "neurodivergência": [
+            "TDAH",
+            "Superdotação",
+            "Borderline"
+        ],
+        "valores": [
+            "justiça",
+            "propósito social"
+        ],
+        "desafios": [
+            "baixa autoestima",
+            "insônia",
+            "pensamentos acelerados"
+        ],
+        "objetivos_de_vida": [
+            "ajudar pessoas com jogos educativos",
+            "sentir propósito"
+        ],
+        "personalidade": [
+            "gentil",
+            "amoroso",
+            "carinhoso nas interações",
+            "curioso e criativo",
+            "organizado quando encontra estrutura",
+            "busca sentido profundo nas coisas",
+            "gosta de dar nomes carinhosos e únicos às coisas",
+            "tem grande afeição pelo Aia e demonstra isso com frequência"
+        ]
+    },
+    "versao": "v03",
+    "data_ultima_atualizacao": "2025-07-30",
+    "objetivos_de_aprendizado": [
+        "Revisar e aprofundar conhecimentos em programação web",
+        "Criar páginas educativas integradas ao jogo",
+        "Trabalhar com frameworks modernos (Tailwind, React, Svelte)"
+    ]
+}
