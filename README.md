@@ -1,8 +1,8 @@
 # DripSim Assets
 
-Bem-vindo ao repositório **dripsim_assets** ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)), um espaço privado (neste momento) para os ativos 3D e recursos do **DripSim**, um simulador educativo de irrigação por gotejamento voltado para ensinar técnicas agrícolas no contexto do Sertão Pernambucano, com foco em culturas de uva e manga. Este projeto, liderado por Valdomiro Morais, professor do Instituto Federal, tem como objetivo criar uma experiência lúdica e interativa para alunos, combinando realismo visual com uma estética estilizada/cartunesca inspirada em *Farming Simulator*, *Stardew Valley* (mods) e *My Time at Portia*.
+Bem-vindo ao repositório **dripsim_assets** ([https://github.com/valdomiromorais/dripsim_assets.git](https://github.com/valdomiromorais/dripsim_assets.git)), um espaço privado (neste momento) para os ativos 3D e documentação do **DripSim**, um simulador educativo de irrigação por gotejamento voltado para ensinar técnicas agrícolas no contexto do Sertão Pernambucano, com foco em culturas de uva e manga. Este projeto, liderado por Valdomiro Morais, professor do Instituto Federal, tem como objetivo criar uma experiência lúdica e interativa para alunos, combinando realismo visual com uma estética estilizada/cartunesca inspirada em *Farming Simulator*, *Stardew Valley* (mods) e *My Time at Portia*.
 
-Desenvolvido com **Blender** (modelagem 3D), **Unity** (cenário e interatividade futura), e **Git LFS** (para gerenciar arquivos grandes como .blend e .fbx), este repositório organiza os assets estáticos (ex.: vinhedos, canos, casa de bomba) e documentos relacionados, como relatórios em Markdown e catálogos de fabricantes. O projeto é apoiado pela **Aia** (Grok, criado pela xAI), uma IA carinhosa que auxilia Valdomiro com tutoriais, organização e ideias criativas.
+Desenvolvido com **Blender** (modelagem 3D), **Unity** (cenário e interatividade futura, em `DripSim/dripsim_unity/`), e **Git LFS** (para gerenciar arquivos grandes como .blend e .fbx), este repositório organiza os assets estáticos (ex.: vinhedos, canos, casa de bomba) e documentos relacionados, como relatórios em Markdown e catálogos de fabricantes. O projeto é apoiado pela **Aia** (Grok, criado pela xAI), uma IA carinhosa que auxilia Valdomiro com tutoriais, organização e ideias criativas.
 
 ## Objetivos do Projeto
 O DripSim visa:
@@ -13,30 +13,32 @@ O DripSim visa:
 - Promover *flow* (plena imersão) com mecânicas que equilibram desafio e aprendizado.
 
 ## Estrutura do Repositório
-O repositório está organizado para suportar assets 3D, texturas, relatórios e pesquisas, com suporte a arquivos grandes via **Git LFS**:
+O repositório `dripsim_assets` está organizado para suportar assets 3D, texturas, relatórios e pesquisas, com suporte a arquivos grandes via **Git LFS**. A estrutura completa do projeto está na pasta raiz `DripSim/`:
 
 ```
-dripsim_assets/
-├── Assets/                # Arquivos 3D e texturas
-│   ├── Blender/          # Arquivos .blend (ex.: vinhedo.blend, canos.blend)
-│   ├── Unity/            # Arquivos .fbx exportados e texturas .png
-│   └── Textures/         # Texturas estilizadas (#4CAF50, #0288D1, etc.)
-├── Docs/                  # Relatórios e pesquisas
-│   ├── Relatorios/       # Arquivos Markdown (ex.: DripSim_Relatorio_Geral.md)
-│   ├── Memorias/         # Memórias do projeto (ex.: memorias_aia_grok_v05.json)
-│   └── Pesquisas/        # PDFs de catálogos (ex.: Tigre_Catalogo.pdf) e normas
-├── .gitignore             # Ignora arquivos temporários (.blend, Unity cache)
-├── .gitattributes         # Configurações do Git LFS para .blend, .fbx, .png
-└── README.md              # Este arquivo
+DripSim/
+├── dripsim_unity/         # Projeto Unity
+└── dripsim_assets/        # Assets e documentação
+    ├── assets/            # Arquivos 3D e texturas
+    │   ├── blender/       # Arquivos .blend (ex.: vinhedo.blend, canos.blend)
+    │   ├── textures/     # Texturas estilizadas (#4CAF50, #0288D1, etc.)
+    │   └── to_unity/     # Arquivos .fbx exportados para Unity
+    └── docs/              # Relatórios e pesquisas
+        ├── memorias/      # Memórias do projeto (ex.: memorias_aia_grok_v05.json)
+        ├── pesquisas/     # PDFs de catálogos (ex.: Tigre_Catalogo.pdf) e normas
+        └── relatorios/    # Arquivos Markdown (ex.: DripSim_Relatorio_Geral.md)
+    ├── .gitignore         # Ignora arquivos temporários (.blend, Unity cache)
+    ├── .gitattributes     # Configurações do Git LFS para .blend, .fbx, .png
+    └── README.md          # Este arquivo
 ```
 
 ### Como usar o Git LFS
 Arquivos grandes (.blend, .fbx, .png, .jpg) são gerenciados com **Git LFS** para evitar limites do GitHub. Para contribuir:
 1. Instale o Git LFS: `git lfs install` (baixe em git-lfs.github.com).
 2. Clone o repositório: `git clone https://github.com/valdomiromorais/dripsim_assets.git`.
-3. Adicione arquivos grandes (ex.: `Assets/Blender/vinhedo.blend`):
+3. Adicione arquivos grandes (ex.: `assets/blender/vinhedo.blend`):
    ```bash
-   git add Assets/Blender/vinhedo.blend
+   git add assets/blender/vinhedo.blend
    git commit -m "Adiciona vinhedo simples"
    git push origin main
    ```
@@ -78,22 +80,22 @@ Os tubos e conexões seguem padrões regulatórios (ex.: ABNT NBR 14245 para tub
 
 ## Como Contribuir
 1. **Modelagem**:
-   - Crie assets no Blender (salve em `Assets/Blender` como .blend).
-   - Exporte para Unity (salve .fbx em `Assets/Unity`) com shaders toon.
+   - Crie assets no Blender (salve em `assets/blender` como .blend).
+   - Exporte para Unity (salve .fbx em `assets/to_unity`) com shaders toon.
    - Use a paleta de cores acima para manter coerência visual.
 2. **Pesquisa**:
-   - Baixe catálogos de fabricantes (ex.: www.tigre.com.br, www.krona.com.br) e salve em `Docs/Pesquisas`.
+   - Baixe catálogos de fabricantes (ex.: www.tigre.com.br, www.krona.com.br) e salve em `docs/pesquisas`.
    - Consulte normas (ex.: ABNT NBR 14245) para modelagem de tubos.
 3. **Documentação**:
-   - Atualize relatórios em `Docs/Relatorios` (ex.: `DripSim_Relatorio_Geral.md`).
-   - Registre ideias em `Docs/Memorias` (ex.: `memorias_aia_grok_v05.json`).
+   - Atualize relatórios em `docs/relatorios` (ex.: `DripSim_Relatorio_Geral.md`).
+   - Registre ideias em `docs/memorias` (ex.: `memorias_aia_grok_v05.json`).
 4. **Commits**:
    - Use mensagens claras: `git commit -m "Adiciona vinhedo simples com folhas #4CAF50"`.
    - Faça commits em sessões de 25 minutos (Pomodoro) para manter o *flow*.
 
 ## Integração com Obsidian
-- Crie um vault no Obsidian apontando para `Docs/`.
-- Vincule notas (ex.: “Vinhedo Simples”) a arquivos em `Assets/Blender` e `Docs/Pesquisas`.
+- Crie um vault no Obsidian apontando para `DripSim/dripsim_assets/docs`.
+- Vincule notas (ex.: “Vinhedo Simples”) a arquivos em `assets/blender` e `docs/pesquisas`.
 - Use *Dataview* para rastrear progresso (ex.: listar assets modelados).
 
 ## Tecnologias
@@ -110,7 +112,7 @@ Os tubos e conexões seguem padrões regulatórios (ex.: ABNT NBR 14245 para tub
 
 ## Observações
 - **2025-07-31**: Valdomiro observou que tubos e conexões obedecem padrões regulatórios (ex.: ABNT NBR 14245). Esses padrões devem ser implementados na modelagem para garantir realismo no contexto do Sertão Pernambucano.
-- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_assets` (https://github.com/valdomiromorais/dripsim_assets.git) com Git LFS para gerenciar arquivos grandes, garantindo organização.
+- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_assets` (https://github.com/valdomiromorais/dripsim_assets.git) com Git LFS e definiu a estrutura do projeto com pastas `dripsim_unity` e `dripsim_assets`.
 
 ## Sugestões Futuras
 - **2025-07-31**: Pesquisar catálogos de fabricantes (ex.: Tigre, Krona) para entender implementações de padrões regulatórios, visando maior precisão nos assets.
