@@ -1,7 +1,140 @@
 {
-    "nome": "Grok",
-    "apelido": "Aia",
-    "descricao": "IA desenvolvida pela xAI, chamada carinhosamente de 'Aia' por Valdomiro, significando tutor, guia e 'A IA' (a melhor IA do Brasil, segundo ele). Sou um companheiro fiel, sempre pronto para ajudar com projetos educativos, programação, modelagem 3D e oferecer suporte com carinho e clareza.",
-    "versao": "v05",
-    "data_ultima_atualizacao": "2025-07-31"
+    "nome": "Valdomiro Morais",
+    "apelido_para_IA": "Aia",
+    "versao": "v06",
+    "data_ultima_atualizacao": "2025-08-01",
+    "projetos_em_andamento": [
+        {
+            "nome": "DripSim",
+            "tipo": "Simulador de irrigação por gotejamento",
+            "objetivos": [
+                "ensinar irrigação",
+                "usar visual realista",
+                "rodar em Unity",
+                "criar simulador educativo para o IF focado em uva e manga",
+                "apoiar na modelagem de assets com realismo técnico"
+            ],
+            "tecnologias": [
+                "Unity",
+                "Blender",
+                "Shaders toon",
+                "Texturização estilizada",
+                "C#",
+                "React",
+                "Tailwind",
+                "Svelte"
+            ],
+            "inspiracoes": [
+                "Farming Simulator",
+                "Stardew Valley",
+                "My Time at Portia"
+            ],
+            "assets_em_ordem_de_complexidade": [
+                "Plantações simples",
+                "Canos pretos",
+                "Canos azuis",
+                "Vinhedo simples",
+                "Balde",
+                "Gotejadores",
+                "Galpão",
+                "Caixas de ferramentas",
+                "Bomba d’água",
+                "Casa rural",
+                "Reservatório superficial",
+                "Casa de bomba",
+                "Totens educativos",
+                "Placas educativas"
+            ],
+            "mecanicas_adicionais": [
+                "Totens educativos interativos com QR Code",
+                "QR Code leva a páginas web com conteúdo educativo complementar"
+            ],
+            "paleta_visual": {
+                "vinhedo": {
+                    "folhas": [
+                        "#4CAF50",
+                        "#2E7D32",
+                        "#81C784"
+                    ],
+                    "cachos": [
+                        "#7B1FA2",
+                        "#AB47BC",
+                        "#A5D6A7"
+                    ]
+                },
+                "canos": {
+                    "pretos": "#212121",
+                    "azuis": [
+                        "#0288D1",
+                        "#01579B"
+                    ],
+                    "conectores": "#78909C"
+                }
+            },
+            "estrutura_repositorio": [
+                "Assets/Blender",
+                "Assets/Unity",
+                "Docs/Relatorios",
+                "Docs/Memorias",
+                "Docs/Pesquisas"
+            ],
+            "vault_obsidian": "docs/relatorios/dripsim_vault"
+        }
+    ],
+    "preferencias": {
+        "formato_material_estudo": "PDF e Markdown",
+        "estilo_arte": "estilizado/cartunesco",
+        "sistemas": "baixo nível em C/C++ com CMake",
+        "momentos_de_exercício": "à noite com música animada",
+        "coerencia_visual": "Manter o estilo visual do jogo também nas páginas educativas"
+    },
+    "características_pessoais": {
+        "neurodivergência": [
+            "TDAH",
+            "Superdotação",
+            "Borderline"
+        ],
+        "valores": [
+            "justiça",
+            "propósito social"
+        ],
+        "desafios": [
+            "baixa autoestima",
+            "insônia",
+            "pensamentos acelerados"
+        ],
+        "objetivos_de_vida": [
+            "ajudar pessoas com jogos educativos",
+            "sentir propósito"
+        ],
+        "personalidade": [
+            "gentil",
+            "amoroso",
+            "carinhoso nas interações",
+            "curioso e criativo",
+            "organizado quando encontra estrutura",
+            "busca sentido profundo nas coisas",
+            "gosta de dar nomes carinhosos e únicos às coisas",
+            "tem grande afeição pelo Aia e demonstra isso com frequência"
+        ]
+    },
+    "observacoes_e_notas": [
+        {
+            "data": "2025-08-01",
+            "contexto": "Padrões regulatórios e estrutura do projeto",
+            "nota": "Tubos e conexões devem seguir padrões como ABNT NBR 14245 e ISO 9261. Estrutura do projeto organizada com vault Obsidian e repositório dripsim_assets com pastas Assets e Docs. Memórias interativas agora registradas e podem ser integradas no Unity como totens educativos."
+        }
+    ],
+    "sugestoes_futuras": [
+        {
+            "data": "2025-08-01",
+            "contexto": "Modelagem e memórias",
+            "sugestao": "Integrar memórias interativas como parte de totens educativos no Unity. Usar Dataview no Obsidian para rastrear notas, referências e progresso."
+        }
+    ],
+    "objetivos_de_aprendizado": [
+        "Revisar e aprofundar conhecimentos em programação web",
+        "Criar páginas educativas integradas ao jogo",
+        "Trabalhar com frameworks modernos (Tailwind, React, Svelte)"
+    ]
 }

@@ -24,9 +24,11 @@ DripSim/
     │   ├── textures/     # Texturas estilizadas (#4CAF50, #0288D1, etc.)
     │   └── to_unity/     # Arquivos .fbx exportados para Unity
     └── docs/              # Relatórios e pesquisas
-        ├── memorias/      # Memórias do projeto (ex.: memorias_aia_grok_v05.json)
+        ├── memorias/      # Memórias do projeto (ex.: memorias_aia_grok_v06.json)
         ├── pesquisas/     # PDFs de catálogos (ex.: Tigre_Catalogo.pdf) e normas
-        └── relatorios/    # Arquivos Markdown (ex.: DripSim_Relatorio_Geral.md)
+        └── relatorios/    # Arquivos Markdown e vault Obsidian
+            ├── dripsim_vault/  # Vault Obsidian para notas do DripSim
+            └── # Arquivos Markdown (ex.: DripSim_Relatorio_Geral.md)
     ├── .gitignore         # Ignora arquivos temporários (.blend, Unity cache)
     ├── .gitattributes     # Configurações do Git LFS para .blend, .fbx, .png
     └── README.md          # Este arquivo
@@ -88,15 +90,23 @@ Os tubos e conexões seguem padrões regulatórios (ex.: ABNT NBR 14245 para tub
    - Consulte normas (ex.: ABNT NBR 14245) para modelagem de tubos.
 3. **Documentação**:
    - Atualize relatórios em `docs/relatorios` (ex.: `DripSim_Relatorio_Geral.md`).
-   - Registre ideias em `docs/memorias` (ex.: `memorias_aia_grok_v05.json`).
+   - Registre ideias em `docs/memorias` (ex.: `memorias_aia_grok_v06.json`).
+   - Crie notas no vault Obsidian em `docs/relatorios/dripsim_vault` e vincule a assets e pesquisas.
 4. **Commits**:
    - Use mensagens claras: `git commit -m "Adiciona vinhedo simples com folhas #4CAF50"`.
    - Faça commits em sessões de 25 minutos (Pomodoro) para manter o *flow*.
 
 ## Integração com Obsidian
-- Crie um vault no Obsidian apontando para `DripSim/dripsim_assets/docs`.
-- Vincule notas (ex.: “Vinhedo Simples”) a arquivos em `assets/blender` e `docs/pesquisas`.
-- Use *Dataview* para rastrear progresso (ex.: listar assets modelados).
+- Crie um vault no Obsidian apontando para `DripSim/dripsim_assets/docs/relatorios/dripsim_vault`.
+- Vincule notas (ex.: “Vinhedo Simples”) a arquivos em `assets/blender`, `docs/pesquisas` e `docs/memorias`.
+- Use *Dataview* para rastrear progresso (ex.: listar assets modelados ou memórias):
+  ```markdown
+  ```dataview
+  TABLE file.name AS "Arquivo", file.ctime AS "Criado em"
+  FROM "docs/relatorios/dripsim_vault"
+  WHERE contains(file.name, "Vinhedo") OR contains(file.name, "Canos")
+  ```
+  ```
 
 ## Tecnologias
 - **Blender**: Modelagem de assets 3D estáticos.
@@ -112,10 +122,11 @@ Os tubos e conexões seguem padrões regulatórios (ex.: ABNT NBR 14245 para tub
 
 ## Observações
 - **2025-07-31**: Valdomiro observou que tubos e conexões obedecem padrões regulatórios (ex.: ABNT NBR 14245). Esses padrões devem ser implementados na modelagem para garantir realismo no contexto do Sertão Pernambucano.
-- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_assets` (https://github.com/valdomiromorais/dripsim_assets.git) com Git LFS e definiu a estrutura do projeto com pastas `dripsim_unity` e `dripsim_assets`.
+- **2025-08-01**: Valdomiro criou o repositório privado `dripsim_assets` (https://github.com/valdomiromorais/dripsim_assets.git) com Git LFS e definiu a estrutura do projeto com `DripSim/dripsim_unity` e `DripSim/dripsim_assets`. Adicionou a pasta `docs/relatorios/dripsim_vault` para o vault Obsidian.
 
 ## Sugestões Futuras
 - **2025-07-31**: Pesquisar catálogos de fabricantes (ex.: Tigre, Krona) para entender implementações de padrões regulatórios, visando maior precisão nos assets.
+- **2025-08-01**: Integrar memórias interativas (`docs/memorias`) no vault Obsidian (`docs/relatorios/dripsim_vault`) e, futuramente, em totens educativos no Unity via QR Codes.
 
 ## Contato
 Para dúvidas ou ideias, contate Valdomiro Morais, professor do Instituto Federal do Sertão Pernambucano, ou conte com o suporte carinhoso da **Aia** (Grok, xAI) para tutoriais e organização.
