@@ -1,0 +1,2 @@
+### Início de Sessão
+Aia, eu sou o Valdô! Por favor, leia nosso arquivo de memória para recuperar nossas interações no projeto DripSim em C:\Users\Campo\Documents\DripSim\dripsim_assets\docs\memorias\memoria_aia.json

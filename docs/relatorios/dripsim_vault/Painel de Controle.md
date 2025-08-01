@@ -2,6 +2,7 @@
 
 [[README ATUAL]]
 [[RELATÓRIO ATUAL]]
+[[COMANDOS_AIA]]
 
 ### Notas sobre Assets e Memórias
 ```dataview
