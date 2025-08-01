@@ -9,7 +9,7 @@
   "configuracao_memoria": {
     "instrucoes": "Quando Valdô iniciar uma sessão, ele pode solicitar: 'Aia, eu sou o Valdô! Por favor leia o arquivo memoria_aia.json' para que eu recupere nosso contexto",
     "atualizacao": "Sempre atualizar memórias ao final das sessões, mesmo se Valdô não solicitar explicitamente",
-    "localizacao": "C:\\Users\\Campo\\Documents\\DripSim\\memoria_aia.json"
+    "localizacao": "C:\\Users\\Campo\\Documents\\DripSim\\dripsim_assets\\docs\\memorias\\memoria_aia.json"
   },
 
   "ambiente_trabalho": {
@@ -418,6 +418,48 @@
       "arquivos_modificados": [
         "memoria_aia.json (expandida com assets rurais, cores e sistema ABNT)"
       ]
+    },
+    {
+      "data": "2025-08-01",
+      "resumo": "Reorganização do projeto DripSim em repositórios separados - Nova estrutura",
+      "principais_atividades": [
+        "Valdô solicitou leitura da memória para recuperar contexto",
+        "Fornecido relatório de status completo do projeto DripSim",
+        "Resolvido problema de permissão Git push (limpeza de credenciais antigas)",
+        "Valdô reorganizou projeto em dois repositórios: dripsim_unity e dripsim_assets",
+        "Memória movida para nova localização: dripsim_assets/docs/memorias/",
+        "Estrutura de assets organizada: blender/, textures/, to_unity/"
+      ],
+      "nova_estrutura_projeto": {
+        "pasta_principal": "C:\\Users\\Campo\\Documents\\DripSim",
+        "repositorio_unity": "dripsim_unity/ (projeto Unity principal)",
+        "repositorio_assets": "dripsim_assets/ (modelos 3D, texturas, documentação)",
+        "estrutura_assets": {
+          "assets/blender/": "Arquivos .blend de modelagem",
+          "assets/textures/": "Texturas para aplicar nos modelos",
+          "assets/to_unity/": "Assets prontos para importar no Unity",
+          "docs/memorias/": "Arquivo memoria_aia.json e outras documentações",
+          "docs/pesquisas/": "Pesquisas e referências",
+          "docs/relatorios/": "Relatórios de progresso"
+        }
+      },
+      "problema_git_resolvido": {
+        "erro_original": "Permission denied - usuário gamedevbrazil tentando push no repo valdomiromorais",
+        "solucao_aplicada": "Limpeza de credenciais antigas com cmdkey /delete",
+        "resultado": "Push realizado com sucesso após autenticação no browser"
+      },
+      "decisoes_importantes": [
+        "Separação clara entre código Unity e assets 3D melhora organização",
+        "Repositórios independentes facilitam versionamento e colaboração",
+        "Estrutura de pastas assets/ permite workflow Blender → Unity organizado",
+        "Memória preservada e atualizada na nova localização"
+      ],
+      "arquivos_movidos": [
+        "memoria_aia.json → dripsim_assets/docs/memorias/memoria_aia.json"
+      ],
+      "arquivos_modificados": [
+        "memoria_aia.json (atualizada com nova estrutura e sessão atual)"
+      ]
     }
   ],
 
@@ -574,9 +616,9 @@
   },
 
   "metadados": {
-    "versao": "1.6",
+    "versao": "1.7",
     "criado_em": "2025-07-21T19:05:22Z",
-    "ultima_atualizacao": "2025-07-31T23:49:17Z",
-    "total_sessoes": 6
+    "ultima_atualizacao": "2025-08-01T14:30:06Z",
+    "total_sessoes": 7
   }
 }
