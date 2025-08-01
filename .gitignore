@@ -97,3 +97,16 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Obsidian vault configuration files
+# These are personal settings and should not be version controlled
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/app.json
+.obsidian/appearance.json
+.obsidian/hotkeys.json
+.obsidian/config
+.obsidian/graph.json
+.obsidian/community-plugins.json
+.obsidian/plugins/
+.obsidian/themes/
